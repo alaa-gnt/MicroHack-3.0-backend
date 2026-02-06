@@ -11,9 +11,6 @@ class OpportunityBase(BaseModel):
     companies_mentioned: Optional[str] = None
     technologies_mentioned: Optional[str] = None
     locations_mentioned: Optional[str] = None
-    expected_benefits: Optional[str] = None
-    estimated_value: Optional[Decimal] = None
-    estimated_cost: Optional[Decimal] = None
 
 class OpportunityCreate(OpportunityBase):
     pass
@@ -26,11 +23,8 @@ class OpportunityUpdate(BaseModel):
     companies_mentioned: Optional[str] = None
     technologies_mentioned: Optional[str] = None
     locations_mentioned: Optional[str] = None
-    expected_benefits: Optional[str] = None
-    estimated_value: Optional[Decimal] = None
-    estimated_cost: Optional[Decimal] = None
 
-class Opportunity(OpportunityBase):
+class OpportunityResponse(OpportunityBase):
     id: str
 
     class Config:

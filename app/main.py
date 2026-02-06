@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
-from app.routers import signals, pipeline, alerts, analytics, knowledge_base, auth
+from app.routers import signals, pipeline, alerts, analytics, knowledge_base, auth, opportunities, feasibility
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -30,3 +30,5 @@ app.include_router(pipeline.router, prefix=f"{settings.API_V1_STR}/pipeline", ta
 app.include_router(alerts.router, prefix=f"{settings.API_V1_STR}/alerts", tags=["Alerts"])
 app.include_router(analytics.router, prefix=f"{settings.API_V1_STR}/analytics", tags=["Analytics"])
 app.include_router(knowledge_base.router, prefix=f"{settings.API_V1_STR}/kb", tags=["Knowledge Base"])
+app.include_router(opportunities.router, prefix=f"{settings.API_V1_STR}/opportunities", tags=["Opportunities"])
+app.include_router(feasibility.router, prefix=f"{settings.API_V1_STR}/feasibility-studies", tags=["Feasibility Studies"])

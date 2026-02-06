@@ -12,8 +12,6 @@ class FeasibilityStudy(Base):
     technical_assessment = Column(Text)
     required_technology_stack = Column(Text)
     market_analysis = Column(Text)
-    business_recommendation = Column(String(20))
-    regulatory_compliance = Column(Text)
     overall_feasibility = Column(String(20), nullable=False)
     final_recommendation = Column(String(20), nullable=False)
     

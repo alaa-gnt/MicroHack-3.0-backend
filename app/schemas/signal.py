@@ -18,7 +18,7 @@ class SignalUpdate(BaseModel):
     source_name: Optional[str] = None
     is_processed: Optional[bool] = None
 
-class Signal(SignalBase):
+class SignalResponse(SignalBase):
     id: str
     date: datetime
     is_processed: bool

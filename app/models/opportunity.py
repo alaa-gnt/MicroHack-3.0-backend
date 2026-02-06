@@ -16,9 +16,6 @@ class Opportunity(Base):
     companies_mentioned = Column(Text)
     technologies_mentioned = Column(Text)
     locations_mentioned = Column(Text)
-    expected_benefits = Column(Text)
-    estimated_value = Column(DECIMAL(12, 2))
-    estimated_cost = Column(DECIMAL(12, 2))
     
     # Relationships
     signal = relationship("Signal", back_populates="opportunity")
