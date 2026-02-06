@@ -5,3 +5,5 @@ from sqlalchemy.orm import Session
 from app.dependencies import get_db
 from app.schemas.signal import SignalCreate, SignalUpdate, SignalResponse
 from app.services.signal_service import SignalService
+
+router = APIRouter()
